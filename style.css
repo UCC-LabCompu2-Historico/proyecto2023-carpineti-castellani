@@ -1,0 +1,145 @@
+/* Estilos generales */
+* {    /* '*' se utiliza para seleccionar todos los elementos y establecer la propiedad 'box-sizing' en 'border-box', lo que asegura que cada elemento incluya el relleno y el borde, sin afectar el tamaño total del elemento. */
+  box-sizing: border-box;
+  margin: 0;    /* Añade espacio por fuera del elemento, creando un espacio entre el elemento y los elementos adyacentes */
+  padding: 0;    /* Establece un espacio en blanco entre el borde del elemento y su contenido interno */
+}
+
+body {
+  font-family: Arial, sans-serif;    /* Se establece Arial como fuente */
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: #333;    /* Color de fondo ('#333'): tono gris oscuro */
+  color: #fff;    /* Color del texto ('#fff'): blanco */
+  display: flex;    /* Contenedor de tipo flexbox, permitiendo la alineación de elementos internos */
+  justify-content: space-between;    /* Distribuye el espacio horizontalmente disponible de manera uniforme entre los elementos internos */
+  align-items: center;    /* Alinea verticalmente los elementos internos en el centro del contenedor */
+  padding: 0 2rem;    /* 'rem': Declaración de tamaño o espacio relativo. ('2rem') significa que el tamaño o espacio se establecerá en el doble del tamaño de fuente del elemento raíz (es decir, en relacion a la dimension de la fuente del codigo de HTML) */
+}
+
+nav ul {    /* selecciona todas las listas desordenadas ('ul': unordered list)  que son hijos directos del elemento de navegacion ('<nav>') */
+  list-style: none;   /* Elimina estilos de viñetas */
+  display: flex;
+}
+
+nav ul li {    /* Se aplica a cada elemento de la lista dentro de ('<nav>') */
+  margin-left: 2rem;
+}
+
+nav ul li a {    /* Se aplica a los enlaces dentro de los elementos listados */
+  color: #fff;
+  text-decoration: none;    /* Elimina la decoración de subrayado en los enlaces */
+}
+
+nav ul li a:hover {    /* Se aplica cuando el cursor está sobre los enlaces de la lista */
+  text-decoration: underline;    /* Agrega un subrayado, de color gris, al posicionar el cursor sobre el enlace */
+  text-decoration-color: lightslategray;
+}
+
+/* Estilos del héroe */
+.hero {
+  background-image: url(https://images.unsplash.com/photo-1533934152674-8f7d2a2a4337?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;    /* Ajusta la imagen de fondo para cubrir completamente el contenedor, y que se posicione en el centro */
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;    /* Apila verticalmente los elementos internos en columnas */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+/* Estilos del título del héroe ('<h1>') y el párrafo ('<p>') */
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+/* Estilos del boton */
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: transform 0.3s ease;    /* Propiedad 'transform', que indica una transicion suave de 0.3 segundos, junto con la función 'scale' para crear una animación de escala *//
+}
+/* Estilos del boton al pasar el cursor */
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);    /* El botón se ampliará en un 10% */
+}
+
+/* Estilos que definen el diseño, el espaciado y la apariencia visual de los productos.*/
+.products {
+  max-width: 1200px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;    /* Establece un espacio de 3 rem entre los productos */
+  flex-wrap: wrap;    /* Permite que los productos se envuelvan automáticamente en una nueva línea si no caben en una sola fila */
+}
+/* Estilos de los productos individuales */
+.product {
+  border: 1px solid #ccc;    /* Establece un borde de 1 píxel sólido con ('#ccc'): Color gris claro */
+  padding: 1rem;
+  width: 300px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);    /* 'box-shadow' crea una sombra suave y (0.2 rem) desplazada hacia abajo, alrededor de los elementos. ('0.5rem') determina cuán difusa o suave es la transición entre la sombra y el elemento, con la configuración de color y opacidad (0.3) */
+  margin-bottom: 2rem;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.product h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* Estilos del botón dentro de cada producto */
+.product .btn {
+  display: inline-block;    /* Establece el elemento como un bloque en línea, lo que permite que otros elementos se coloquen en la misma línea que el botón */
+  background-color: #333;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.product .btn:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: lightblue;
+}
