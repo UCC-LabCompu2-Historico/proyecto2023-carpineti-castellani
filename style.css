@@ -11,8 +11,8 @@ body {
 
 /* Estilos del encabezado */
 header {
-  background-color: #333;    /* Color de fondo ('#333'): tono gris oscuro */
-  color: #fff;    /* Color del texto ('#fff'): blanco */
+  background-color: #000000;    /* Color de fondo ('#333'): tono gris oscuro */
+  color: #000000;    /* Color del texto ('#fff'): blanco */
   display: flex;    /* Contenedor de tipo flexbox, permitiendo la alineación de elementos internos */
   justify-content: space-between;    /* Distribuye el espacio horizontalmente disponible de manera uniforme entre los elementos internos */
   align-items: center;    /* Alinea verticalmente los elementos internos en el centro del contenedor */
@@ -29,7 +29,7 @@ nav ul li {    /* Se aplica a cada elemento de la lista dentro de ('<nav>') */
 }
 
 nav ul li a {    /* Se aplica a los enlaces dentro de los elementos listados */
-  color: #fff;
+  color: #000000;
   text-decoration: none;    /* Elimina la decoración de subrayado en los enlaces */
 }
 
