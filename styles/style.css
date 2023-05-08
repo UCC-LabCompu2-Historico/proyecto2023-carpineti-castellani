@@ -1,4 +1,5 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
 * {    /* '*' se utiliza para seleccionar todos los elementos y establecer la propiedad 'box-sizing' en 'border-box', lo que asegura que cada elemento incluya el relleno y el borde, sin afectar el tamaño total del elemento. */
   box-sizing: border-box;
   margin: 0;    /* Añade espacio por fuera del elemento, creando un espacio entre el elemento y los elementos adyacentes */
@@ -7,6 +8,8 @@
 
 body {
   font-family: Arial, sans-serif;    /* Se establece Arial como fuente */
+  background-color: #1a1919f8;
+  color: #fff;
 }
 
 /* Estilos del encabezado */
@@ -22,6 +25,7 @@ header {
 nav ul {    /* selecciona todas las listas desordenadas ('ul': unordered list)  que son hijos directos del elemento de navegacion ('<nav>') */
   list-style: none;   /* Elimina estilos de viñetas */
   display: flex;
+  padding: 1rem;
 }
 
 nav ul li {    /* Se aplica a cada elemento de la lista dentro de ('<nav>') */
@@ -55,6 +59,7 @@ nav ul li a:hover {    /* Se aplica cuando el cursor está sobre los enlaces de 
 .hero h1 {
   font-size: 5rem;
   margin-bottom: 2rem;
+  font-family: 'Sigmar';
 }
 
 .hero p {
@@ -71,7 +76,7 @@ nav ul li a:hover {    /* Se aplica cuando el cursor está sobre los enlaces de 
   border-radius: 0.5rem;
   text-decoration: none;
   margin-top: 2rem;
-  transition: transform 0.3s ease;    /* Propiedad 'transform', que indica una transicion suave de 0.3 segundos, junto con la función 'scale' para crear una animación de escala *//
+  transition: transform 0.3s ease;    /* Propiedad 'transform', que indica una transicion suave de 0.3 segundos, junto con la función 'scale' para crear una animación de escala */
 }
 /* Estilos del boton al pasar el cursor */
 .btn:hover {
@@ -81,13 +86,13 @@ nav ul li a:hover {    /* Se aplica cuando el cursor está sobre los enlaces de 
 }
 
 /* Estilos que definen el diseño, el espaciado y la apariencia visual de los productos.*/
-.products {
+#product {
   max-width: 1200px;
   margin: 4rem auto;
   text-align: center;
 }
 
-.products h2 {
+#product h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
 }
