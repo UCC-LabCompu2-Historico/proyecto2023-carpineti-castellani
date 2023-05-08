@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>    <!-- La etiqueta header engloba la seccion del encabezado -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Zapatillas de Lujo</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" type="image/png" href="../ico.ico">
+  </head>
+  <body>
+    <header>
+      <nav>    <!-- Etiqueta de navegacion -->
+        <ul>    <!-- Menú de navegación que contiene cuatro elementos: “Inicio”, “Zapatillas”, “Sobre Nosotros” y “Contacto” -->
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="#">Zapatillas</a></li>
+          <li><a href="./aboutUs.html">Sobre Nosotros</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
+          <li><a href="./login.html">Log in</a></li>
+        </ul>    <!-- Contiene listado los elementos de navegacion representados por ('<li>'), de los cuales poseen un enlace ('<a>') que apunta a diferentes secciones de la pagina -->
+      </nav>
+    </header>
+
+    <main>    <!-- La etiqueta main engloba la seccion principal, la cual contiene 2 secciones menores dentro: "hero" y "products" -->
+      <section class="hero">    <!-- Se define una seccion principal "hero" de la pagina, en la cual se emplea para destacar la tematica de la misma -->
+        <h1>$neakers</h1> <!-- Titulo, con una descripcion ('<p>'), el cual se le proporciona un enlace ('<a>'). Aquello con termino ('<h>') previo aludira al encabezado: En relacion a su numero, a medida que aumente ('<h1>'), ('<h2>'), etc disminuira la importancia de lo que alude del mismo, -->
+        <p>
+          ¡Compra en la tienda mas segura de argentina, y esperalas en tu casa!
+        </p>
+        <a href="#product" class="btn">Ver Zapatillas</a>
+      </section>
+
+      <section class="products" id="product">    <!-- La sección "products" presenta las zapatillas, con imagenes, nombres y precios de las mismas -->
+        <h2>Nuestras Zapatillas Destacadas</h2>
+        <div class="product-container">    <!-- Contenedor '<div>' para agrupar y organizar los elementos de la seccion "products" -->
+          <div class="product">    <!-- Cada '<div>' representa un producto individual. Dentro de cada (<div class="product">), se encuentra una imagen ('<img>'), el nombre de la zapatilla ('<h3>'), el precio ('<p>') y un botón para agregar al carrito ('<a class="btn">') -->
+            <img
+              src="https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-Hi-Off-White-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1610079983&q=57"
+              alt="Zapatilla 1"
+            />
+            <h3>Converse Vulcanized</h3>
+            <p>Precio: $800</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+          <div class="product">
+            <img
+              src="https://images.stockx.com/images/Air-Jordan-1-Retro-High-OG-Lucky-Green-GS-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1682532061&q=57"
+              alt="Zapatilla 2"
+            />
+            <h3>Jordan 1 Retro Lucky Green</h3>
+            <p>Precio: $160</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+          <div class="product">
+            <img
+              src="
+              https://images.stockx.com/images/Nike-SB-Dunk-Low-Travis-Scott-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1606325738&q=57"
+              alt="Zapatilla 3"
+            />
+            <h3>Nike Dunk x Travis Scott</h3>
+            <p>Precio: $1349</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+          <div class="product">
+            <img
+              src="https://images.stockx.com/images/Nike-Dunk-Low-Travis-Scott-x-Playstation.png?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1606344244&q=57"
+              alt="Zapatilla 3"
+            />
+            <h3>Nike Dunk Travis Scott x Playstation</h3>
+            <p>Precio: $760k</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+          <div class="product">
+            <img
+              src="https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-70s-Hi-Comme-des-Garcons-PLAY-White-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1607647598&q=57"
+              alt="Zapatilla 3"
+            />
+            <h3>Converse Chuck Taylor x Comme des Garcons</h3>
+            <p>Precio: $120</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+          <div class="product">
+            <img
+              src="https://images.stockx.com/images/Air-Jordan-4-Retro-Eminem-Encore-2017-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=75&fm=avif&auto=compress&dpr=1&trim=color&updated_at=1609772180&q=57"
+              alt="Zapatilla 3"
+            />
+            <h3>Jordan 4 Retro High x Eminem Encore</h3>
+            <p>Precio: $40k</p>
+            <a href="#" class="btn">Agregar al Carrito</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer> <!-- Pie de pagina -->
+      <p>2023. Todos los Derechos Reservados. $neakers, CA.</p>
+    </footer>
+  </body>
+</html>
