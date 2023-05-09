@@ -82,7 +82,7 @@ nav ul li a:hover {    /* Se aplica cuando el cursor está sobre los enlaces de 
 .btn:hover {
   background-color: #333;
   color: #fff;
-  transform: scale(1.1);    /* El botón se ampliará en un 10% */
+  transform: scale(0.9);    /* El botón se ampliará en un 10% */
 }
 
 /* Estilos que definen el diseño, el espaciado y la apariencia visual de los productos.*/

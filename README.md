@@ -6,6 +6,7 @@ Estructura de Proyecto Lab de Compu II - 2023
 ### Sobre el Repositorio
 - [ ] El proyecto debe estar subido al repositorio adecuado "Proyecto2023-ApellidoAlumno1-ApellidoAlumno2"
 - [ ] Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
+- [ Proyecto: "$neakers" Pagina de venta de Zapatillas. Autores: Castellani Franco y Carpineti Octavio. En la misma, se divide en 4 paginas. Una de inicio, en la cual se desplega un menu, permitiendonos elegir entre visualizar el catalogo de las zapatillas, informarse acerca de la empresa, permitir opciones de contacto y dar la posibilidad de iniciar secion. ( https://ucc-labcompu2.github.io/proyecto2023-carpineti-castellani/index.html ) ] 
 - [ ] La estructura del proyecto debe ser adecuada (crear una carpeta para las imágenes, otra para los sketch/mockups/Wireframes). Es importante que contenga SKETCH y MOCKUP/WIREFRAME (debe estar en formato: PDF, PNG o JPG).
 - [ ] El código debe estar pusheado en el repositorio (emplear gh-pages ó publicar la página desde el main), y no debe haber diferencias entre **main** y **gh-pages** (verificar de realizar el Merge).
 - [ ] Publicar la Web empleando GitHubPages
