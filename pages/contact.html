@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/contact.css"
     <link rel="icon" type="image/png" href="ico.ico">
     <title>Inicio</title>
 </head>
@@ -22,5 +23,15 @@
           </ul>    <!-- Contiene listado los elementos de navegacion representados por ('<li>'), de los cuales poseen un enlace ('<a>') que apunta a diferentes secciones de la pagina -->
         </nav>
       </header>
+    <h1>Comentarios</h1>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="comment">Quejas o recomendaciones:</label>
+        <textarea id="comment" name="comment" rows="5" cols="50" maxlength="200" required></textarea><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>

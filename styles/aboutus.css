@@ -24,12 +24,6 @@ ul {
 
 /* Estilos para la barra de navegación */
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-}
-
 nav a:hover {
     color: #ffffff;
 }

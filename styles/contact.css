@@ -1,0 +1,94 @@
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav li:last-child {
+    margin-right: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Estilos para los párrafos */
+p {
+    margin: 0 0 20px;
+}
+
+/* Estilos para las listas */
+ul {
+    margin: 0 0 20px;
+    padding: 0 0 0 40px;
+}
+
+/* Estilos para los inputs */
+input[type="email"], textarea {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="email"] {
+    border: 1px solid #ccc;
+}
+
+textarea {
+    border: 1px solid #ccc;
+    height: 200px;
+}
+
+/* Estilos para el botón */
+button {
+    background-color: #222;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #444;
+}

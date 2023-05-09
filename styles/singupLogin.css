@@ -25,17 +25,18 @@ body {
     border-radius: 5px;
   }
   button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 100%;
+    display: inline-block;
+    background-color: #294949;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
   }
   button:hover {
-    background-color: #45a049;
+    background-color: #000000;
+    transform: scale(0.9);
   }
   .cancelbtn {
     background-color: #f44336;
