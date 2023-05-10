@@ -1,8 +1,9 @@
 body {
     background-color: #1a1919f8;
     font-family: Arial, sans-serif;
-  }
-  .container {
+}
+
+.container {
     margin: 0 auto;
     margin-top: 50px;
     width: 300px;
@@ -10,12 +11,14 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-  }
-  .logo {
+}
+
+.logo {
     width: 100px;
     margin-bottom: 20px;
-  }
-  input[type=text], input[type=password] {
+}
+
+input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -23,8 +26,9 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 5px;
-  }
-  button {
+}
+
+button {
     display: inline-block;
     background-color: #294949;
     color: #ffffff;
@@ -34,23 +38,28 @@ body {
     text-decoration: none;
     margin-top: 2rem;
     transition: transform 0.3s ease;
-  }
-  button:hover {
+}
+
+button:hover {
     background-color: #000000;
     transform: scale(0.9);
-  }
-  .cancelbtn {
+}
+
+.cancelbtn {
     background-color: #f44336;
-  }
-  .imgcontainer {
+}
+
+.imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
-  }
-  img.avatar {
+}
+
+img.avatar {
     width: 100px;
     border-radius: 50%;
-  }
-  span.psw {
+}
+
+span.psw {
     float: right;
     padding-top: 16px;
-  }
+}
