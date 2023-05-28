@@ -1,4 +1,4 @@
-# Sneakers Store Argentina
+# $neakers Store Argentina
 
 Este proyecto consiste en la creación de una página web para satisfacer las necesidades de una comunidad de coleccionistas de zapatillas exclusivas en Argentina.
 
