@@ -27,4 +27,4 @@ En esta tienda encontrarás una selección de las mejores zapatillas disponibles
 ## Links
 
 - [Link al repositorio de GitHub](https://github.com/UCC-LabCompu2/proyecto2023-carpineti-castellani)
-- [Link a la página web](https://ucc-labcompu2.github.io/proyecto2023-carpineti-castellani/index.html)
+- [Link a la página web](https://github.com/UCC-LabCompu2/proyecto2023-carpineti-castellani/deployments/activity_log?environment=github-pages)
