@@ -53,3 +53,4 @@ downloadBtn.addEventListener('click', () => {
     link.download = 'canvas.png';
     link.click();
 });
+
