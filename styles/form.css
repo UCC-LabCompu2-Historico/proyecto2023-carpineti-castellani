@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 500px;
+    max-width: 100px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -39,6 +39,11 @@ select {
     border-radius: 5px;
     background-color: #f8f8f8;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 10%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
 select {
