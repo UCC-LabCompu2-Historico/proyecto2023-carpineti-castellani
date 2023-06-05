@@ -4,12 +4,30 @@ body {
     background-color: #4b3f68;
 }
 
+.container {
+    text-align: center;
+    margin-top: -50px; /* Ajusta el valor negativo según sea necesario */
+}
+
+.title {
+    text-align: center;
+    font-family: 'Sigmar One', cursive;
+    font-size: 48px;
+    position: absolute;
+    top: 250px; /* Ajusta este valor según tu preferencia */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white !important;
+}
+
+
 /* Estilos de la lista de navegación */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en varias líneas */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,11 +35,12 @@ ul {
 
 /* Estilos de los elementos de la lista */
 li {
-    margin: 10px;
+    margin: 6px;
 }
 
 /* Estilos de los enlaces */
 a {
+    flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en varias líneas */
     display: inline-block;
     padding: 10px 20px;
     background-color: #222;

@@ -10,7 +10,7 @@ body {
 .hero h1 {
     font-size: 5rem;
     margin-bottom: 2rem;
-    font-family: 'Sigmar';
+    font-family: 'Sigmar', sans-serif;
 }
 
 h1,
@@ -25,5 +25,29 @@ ul {
     margin: 0;
 }
 
+/* Estilos para los elementos de la lista de zapatillas */
+ul li {
+    margin-bottom: 10px;
+}
 
+/* Estilos para los párrafos de información de las zapatillas */
+ul li p {
+    margin: 5px 0;
+}
 
+/* Estilos para los títulos de las zapatillas */
+ul li h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilos para los valores de la empresa */
+ul li ul {
+    margin-top: 10px;
+}
+
+/* Estilos para los valores de la empresa */
+ul li ul li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
