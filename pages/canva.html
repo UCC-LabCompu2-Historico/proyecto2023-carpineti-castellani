@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="author" content="Castellani Franco y Carpineti Octavio" />
+    <meta name="description" content="Tienda online de zapatillas de lujo en Argentina" />
+    <meta name="keyword" content="Drip, Zapatillas, Sneakers, Vestimenta, Canva" />
+    <meta charset="UTF-8">
+    <title>$neakers</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/singupLogin.css">
+    <link rel="stylesheet" href="../styles/canva.css" />
+    <link rel="icon" type="image/png" href="../ico.ico">    <!-- Favicon -->
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Zapatillas</a></li>
+            <li><a href="./aboutUs.html">Sobre Nosotros</a></li>
+            <li><a href="./contact.html">Contacto</a></li>
+            <li><a href="./login.html">Log in</a></li>
+            <li><a href="./canva.html">Crea tu diseño</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="canvas-title">
+    <h1>Anímate a crear tu propio diseño</h1>
+</div>
+
+<div class="canvas-container">
+    <canvas id="pixel-canvas"></canvas>
+</div>
+<div class="button-container">
+    <div class="color-picker-container">
+        <input type="color" id="color-picker" class="color-picker" value="#000000">
+        <label for="color-picker">Color</label>
+    </div>
+    <button id="clear-btn">Borrar todo</button>
+</div>
+
+<div class="center-container">
+    <button id="download-btn">Descargar</button>
+</div>
+
+<script src="../scripts/canva.js"></script>
+</body>
+</html>
