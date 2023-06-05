@@ -1,8 +1,9 @@
 body {
     background-color: #1a1919f8;
     font-family: Arial, sans-serif;
-  }
-  .container {
+}
+
+.container {
     margin: 0 auto;
     margin-top: 50px;
     width: 300px;
@@ -10,12 +11,16 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-  }
-  .logo {
+}
+
+.logo {
     width: 100px;
     margin-bottom: 20px;
-  }
-  input[type=text], input[type=password] {
+}
+
+input[type="text"],
+input[type="password"] {
+    color: #523985;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -23,32 +28,95 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 5px;
-  }
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+}
+
+button {
+    display: inline-block;
+    background-color: #294949;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+    transform: scale(0.9);
+}body {
+     background-color: #1a1919f8;
+     font-family: Arial, sans-serif;
+ }
+
+.container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 300px;
+    text-align: center;
+    background-color: #a5a4a4;
+    padding: 20px;
     border-radius: 5px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
-  .cancelbtn {
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    background-color: #294949;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #000000;
+    transform: scale(0.9);
+}
+
+.cancelbtn {
     background-color: #f44336;
-  }
-  .imgcontainer {
+}
+
+.submitbtn {
+    background-color: #523985;
+}
+
+.submitbtn:hover {
+    background-color: #28234e;
+}
+
+.imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
-  }
-  img.avatar {
+}
+
+img.avatar {
     width: 100px;
     border-radius: 50%;
-  }
-  span.psw {
+}
+
+span.psw {
     float: right;
     padding-top: 16px;
-  }
+}

@@ -1,10 +1,19 @@
-Titulo: $neakers store argentina
+# $neakers Store Argentina
 
-Descripcion: Se busco crear una pagina para suplir las necesidades de una comunidad de coleccionistas de zapatillas exclusivas
+Este proyecto consiste en la creación de una página web para satisfacer las necesidades de una comunidad de coleccionistas de zapatillas exclusivas en Argentina.
 
-Al abir la pagina esta nos redirecciona a una pestaña tipo menu donde nos permite seleccionar las diferentes opciones entre los menus
+Al abrir la página, se nos redirige a una pestaña de menú que nos permite seleccionar diferentes opciones entre los menús disponibles.
 
-Autores: Castellani Franco, Carpineti Octavio
-Link gh-pages https://ucc-labcompu2.github.io/proyecto2023-carpineti-castellani/
-Contenido: Las mejores zapatillas de argentina
-Tecnologias usadas: html, css.
+## Autores
+
+- Castellani Franco
+- Carpineti Octavio
+
+## Contenido
+
+En esta tienda encontrarás una selección de las mejores zapatillas disponibles en Argentina.
+
+## Tecnologías utilizadas
+
+- HTML
+- CSS

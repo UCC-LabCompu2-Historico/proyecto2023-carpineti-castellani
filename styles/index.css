@@ -1,24 +1,29 @@
-
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     background-color: #4b3f68;
 }
 
+/* Estilos de la lista de navegación */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en varias líneas */
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Estilos de los elementos de la lista */
 li {
-    margin: 10px;
+    margin: 6px;
 }
 
+/* Estilos de los enlaces */
 a {
+    flex-wrap: wrap; /* Permite que los elementos de la lista se envuelvan en varias líneas */
     display: inline-block;
     padding: 10px 20px;
     background-color: #222;
@@ -28,6 +33,7 @@ a {
     transition: background-color 0.3s ease;
 }
 
+/* Estilos de los enlaces al pasar el cursor */
 a:hover {
     background-color: #444;
 }

@@ -1,0 +1,38 @@
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#pixel-canvas {
+    border: 1px solid #000;
+}
+
+#download-btn {
+    display: block;
+    margin: 0 auto;
+}
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#black-color {
+    background-color: #000;
+}
+
+#red-color {
+    background-color: #ff0000;
+}
+
+#green-color {
+    background-color: #00ff00;
+}
+
+#blue-color {
+    background-color: #0000ff;
+}
