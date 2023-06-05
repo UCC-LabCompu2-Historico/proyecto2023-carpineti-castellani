@@ -61,4 +61,33 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function validarFormulario() {
+    var nombreCliente = document.getElementById("nombreCliente").value;
+    var email = document.getElementById("email").value;
+    var cp = document.getElementById("cp").value;
+    var ciudad = document.getElementById("ciudad").value;
+    var direccion = document.getElementById("direccion").value;
+    var numeroTarjeta = document.getElementById("numeroTarjeta").value;
+    var vencimientoTarjeta = document.getElementById("vencimientoTarjeta").value;
+    var titularTarjeta = document.getElementById("titularTarjeta").value;
+    var direccionFacturacion = document.getElementById("direccionFacturacion").value;
+    var codigoSeguridad = document.getElementById("codigoSeguridad").value;
 
+    if (
+        nombreCliente === "" ||
+        email === "" ||
+        cp === "" ||
+        ciudad === "" ||
+        direccion === "" ||
+        numeroTarjeta === "" ||
+        vencimientoTarjeta === "" ||
+        titularTarjeta === "" ||
+        direccionFacturacion === "" ||
+        codigoSeguridad === ""
+    ) {
+        alert("Por favor, complete todos los campos antes de realizar la compra.");
+        return false;
+    }
+
+    return true;
+}

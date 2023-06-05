@@ -34,23 +34,31 @@ input[type="email"],
 input[type="number"],
 select {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 select {
     appearance: none;
+    padding-right: 30px;
+    background-color: #4b3f68;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 input[type="submit"] {
     background-color: #4caf50;
     color: #fff;
     border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
+    border-radius: 5px;
+    padding: 12px;
     cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
@@ -69,21 +77,24 @@ input[type="submit"]:hover {
     margin-top: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
+    background-color: #222;
 }
 
 #detallesTarjeta label {
     display: block;
     margin-top: 10px;
-    font-weight: normal;
+    font-weight: bold;
+    color: #fff;
 }
 
 #detallesTarjeta input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
 }
 
@@ -92,4 +103,5 @@ input[type="submit"]:hover {
     display: none;
     text-align: center;
     margin-top: 10px;
+    color: #222;
 }
