@@ -14,12 +14,25 @@ let selectedColor = '#000000';
 let isErasing = false;
 
 // Función para dibujar un píxel
+/**
+ * Funcion que dibuja un píxel en las coordenadas especificadas con el color dado.
+ * @method drawPixel
+ * @param {number} x - La coordenada x del píxel.
+ * @param {number} y - La coordenada y del píxel.
+ * @param {string} color - El color del píxel en formato hexadecimal.
+ * @return {void} No retorna ningún valor.
+ */
 function drawPixel(x, y, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
 }
 
-// Función para obtener las coordenadas del clic en el lienzo
+/**
+ * Funcion que obtiene las coordenadas (x, y) del lienzo a partir del evento de clic.
+ * @method getCursorPosition
+ * @param {Event} event - El evento de clic.
+ * @return {Object} Un objeto con las propiedades x e y que representan las coordenadas.
+ */
 function getCursorPosition(event) {
     const rect = canvas.getBoundingClientRect();
     const x = Math.floor((event.clientX - rect.left) / pixelSize);
@@ -27,7 +40,13 @@ function getCursorPosition(event) {
     return { x, y };
 }
 
-// Función para dibujar en el lienzo al hacer clic
+/**
+ * Funcion que dibuja en el lienzo al hacer clic en las coordenadas obtenidas del evento.
+ * Si la opción de borrado está activada, se borra el píxel en las coordenadas.
+ * @method handleCanvasClick
+ * @param {Event} event - El evento de clic en el lienzo.
+ * @return {void} No retorna ningún valor.
+ */
 canvas.addEventListener('click', (event) => {
     const { x, y } = getCursorPosition(event);
     if (isErasing) {
@@ -37,18 +56,32 @@ canvas.addEventListener('click', (event) => {
     }
 });
 
-// Función para cambiar el color seleccionado
+/**
+ * Cambia el color seleccionado para dibujar en el lienzo.
+ * @method changeColor
+ * @param {string} color - El nuevo color en formato hexadecimal.
+ * @return {void} No retorna ningún valor.
+ */
 function changeColor(color) {
     selectedColor = color;
     isErasing = false;
 }
 
-// Función para borrar en el lienzo
+/**
+ * Funcion que activa la opción de borrado en el lienzo.
+ * @method erase
+ * @return {void} No retorna ningún valor.
+ */
 function erase() {
     isErasing = true;
 }
 
-// Cambiar el color seleccionado al hacer clic en un botón de color
+/**
+ * Cambia el color seleccionado para dibujar en el lienzo al hacer clic en un botón de color.
+ * @method handleColorButtonClick
+ * @param {Event} event - El evento de clic en el botón de color.
+ * @return {void} No retorna ningún valor.
+ */
 const colorButtons = document.querySelectorAll('.color-btn');
 colorButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -57,6 +90,11 @@ colorButtons.forEach((button) => {
     });
 });
 
-// Borrar en el lienzo al hacer clic en el botón de borrar
+/**
+ * Activa la opción de borrado en el lienzo al hacer clic en el botón de borrar.
+ * @method handleEraseButtonClick
+ * @param {Event} event - El evento de clic en el botón de borrar.
+ * @return {void} No retorna ningún valor.
+ */
 const eraseButton = document.getElementById('erase-btn');
 eraseButton.addEventListener('click', erase);

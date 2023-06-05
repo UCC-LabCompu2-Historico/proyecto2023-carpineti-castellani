@@ -1,3 +1,10 @@
+/**
+ * Muestra u oculta los detalles de la tarjeta según el método de pago seleccionado.
+ * @method mostrarDetallesTarjeta
+ * @param {string} metodoPago - El método de pago seleccionado.
+ * @param {HTMLElement} detallesTarjeta - El elemento HTML que contiene los detalles de la tarjeta.
+ * @return {void} No retorna ningún valor.
+ */
 function mostrarDetallesTarjeta() {
     var metodoPago = document.getElementById("metodoPago").value;
     var detallesTarjeta = document.getElementById("detallesTarjeta");
@@ -28,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function() {
     cantidadInput.addEventListener("input", calcularTotal);
     servicioSelect.addEventListener("change", calcularTotal);
 
+    /**
+     * Calcula el total a pagar en función de la cantidad, precio de la zapatilla y el servicio seleccionado.
+     * @return {void} No retorna ningún valor.
+     */
     function calcularTotal() {
         const cantidad = parseInt(cantidadInput.value);
         const precio = parseInt(precioZapatilla);
