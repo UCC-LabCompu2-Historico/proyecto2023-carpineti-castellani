@@ -11,7 +11,11 @@ function mostrarDetallesTarjeta() {
 
     if (metodoPago === "efectivo") {
         detallesTarjeta.style.display = "none";
-    } else {
+    }
+    else if (metodoPago === "null"){
+        detallesTarjeta.style.display = "none";
+    }
+    else {
         detallesTarjeta.style.display = "block";
     }
 }
@@ -62,32 +66,85 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function validarFormulario() {
-    var nombreCliente = document.getElementById("nombreCliente").value;
+    var nombreCliente = document.getElementById("nombreCliente");
+    var email = document.getElementById("email");
+    var cp = document.getElementById("cp");
+    var ciudad = document.getElementById("ciudad");
+    var direccion = document.getElementById("direccion");
+    var numeroTarjeta = document.getElementById("numeroTarjeta");
+    var vencimientoTarjeta = document.getElementById("vencimientoTarjeta");
+    var titularTarjeta = document.getElementById("titularTarjeta");
+    var direccionFacturacion = document.getElementById("direccionFacturacion");
+    var codigoSeguridad = document.getElementById("codigoSeguridad");
+
+    // Validar el campo "Email" con la expresión regular corregida
     var email = document.getElementById("email").value;
-    var cp = document.getElementById("cp").value;
-    var ciudad = document.getElementById("ciudad").value;
-    var direccion = document.getElementById("direccion").value;
-    var numeroTarjeta = document.getElementById("numeroTarjeta").value;
-    var vencimientoTarjeta = document.getElementById("vencimientoTarjeta").value;
-    var titularTarjeta = document.getElementById("titularTarjeta").value;
-    var direccionFacturacion = document.getElementById("direccionFacturacion").value;
-    var codigoSeguridad = document.getElementById("codigoSeguridad").value;
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@(outlook\.com|gmail\.com|hotmail\.com|yahoo\.com)$/i;
+    if (!emailRegex.test(email)) {
+        alert("Por favor, ingrese una dirección de correo electrónico válida.");
+        document.getElementById("email").value = ""; // Blanquear el campo "Email"
+        return false;
+    }
+
+
+    var numerosRegex = /^[0-9]+$/;
+
+    if (nombreCliente.value === "") {
+        nombreCliente.value = "";
+    }
+
+    if (email.value === "") {
+        email.value = "";
+    }
+
+    if (cp.value === "" || !numerosRegex.test(cp.value)) {
+        cp.value = "";
+    }
+
+    if (ciudad.value === "") {
+        ciudad.value = "";
+    }
+
+    if (direccion.value === "") {
+        direccion.value = "";
+    }
+
+    if (numeroTarjeta.value === "" || !numerosRegex.test(numeroTarjeta.value)) {
+        numeroTarjeta.value = "";
+    }
+
+    if (vencimientoTarjeta.value === "" || !numerosRegex.test(vencimientoTarjeta.value)) {
+        vencimientoTarjeta.value = "";
+    }
+
+    if (titularTarjeta.value === "") {
+        titularTarjeta.value = "";
+    }
+
+    if (direccionFacturacion.value === "") {
+        direccionFacturacion.value = "";
+    }
+
+    if (codigoSeguridad.value === "" || !numerosRegex.test(codigoSeguridad.value)) {
+        codigoSeguridad.value = "";
+    }
 
     if (
-        nombreCliente === "" ||
-        email === "" ||
-        cp === "" ||
-        ciudad === "" ||
-        direccion === "" ||
-        numeroTarjeta === "" ||
-        vencimientoTarjeta === "" ||
-        titularTarjeta === "" ||
-        direccionFacturacion === "" ||
-        codigoSeguridad === ""
+        nombreCliente.value === "" ||
+        email.value === "" ||
+        cp.value === "" ||
+        ciudad.value === "" ||
+        direccion.value === "" ||
+        numeroTarjeta.value === "" ||
+        vencimientoTarjeta.value === "" ||
+        titularTarjeta.value === "" ||
+        direccionFacturacion.value === "" ||
+        codigoSeguridad.value === ""
     ) {
-        alert("Por favor, complete todos los campos antes de realizar la compra.");
+        alert("Por favor, complete todos los campos correctamente antes de realizar la compra.");
         return false;
     }
 
     return true;
 }
+
