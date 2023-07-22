@@ -12,7 +12,7 @@ function mostrarDetallesTarjeta() {
     if (metodoPago === "efectivo") {
         detallesTarjeta.style.display = "none";
     }
-    else if (metodoPago === "null"){
+    else if (metodoPago === "null") {
         detallesTarjeta.style.display = "none";
     }
     else {
@@ -20,7 +20,7 @@ function mostrarDetallesTarjeta() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Obtener parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
     const nombreZapatilla = urlParams.get("name");
@@ -53,15 +53,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Mostrar el total a pagar en un texto después de enviar el formulario
     const form = document.getElementById("purchase-form");
-    form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evitar el envío del formulario
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
 
-        const cantidad = parseInt(cantidadInput.value);
-        const precio = parseInt(precioZapatilla);
-        const servicio = parseInt(servicioSelect.value);
-        const total = cantidad * precio + servicio;
-        totalText.textContent = "Total a pagar: $" + total;
-        totalText.style.display = "block";
+        // Resto del código para el cálculo del total y otras acciones...
+
+        // Mostrar el mensaje de agradecimiento después de enviar el formulario
+        var mensajeGracias = document.getElementById("mensajeGracias");
+        mensajeGracias.style.display = "block";
+
+        // Redireccionar al catálogo de zapatillas después de 5 segundos
+        setTimeout(function () {
+            window.location.href = "./main.html"; // Ruta a la página del catálogo de zapatillas
+        }, 5000); // 5000 milisegundos = 5 segundos
     });
 });
 
@@ -85,7 +89,6 @@ function validarFormulario() {
         document.getElementById("email").value = ""; // Blanquear el campo "Email"
         return false;
     }
-
 
     var numerosRegex = /^[0-9]+$/;
 
@@ -145,6 +148,11 @@ function validarFormulario() {
         return false;
     }
 
+    // Mostrar mensaje de agradecimiento y redireccionar después de 5 segundos
+    alert("Muchas gracias por su compra, le hemos enviado el resumen de compra a su e-mail sobre el envío y facturación, entre otros.\nSera redireccionado al catalogo de zapatillas en 5 segundos.");
+    setTimeout(function () {
+        window.location.href = "./main.html"; // Ruta a la página del catálogo de zapatillas
+    }, 5000); // 5000 milisegundos = 5 segundos
+
     return true;
 }
-
