@@ -25,19 +25,46 @@
         </ul>
     </nav>
 </header>
+
 <div class="canvas-container">
-    <canvas id="pixel-canvas"></canvas>
-</div>
-<div class="button-container">
-    <button class="color-btn" data-color="#000000"></button>
-    <button class="color-btn" data-color="#ff0000"></button>
-    <button class="color-btn" data-color="#00ff00"></button>
-    <button class="color-btn" data-color="#0000ff"></button>
-    <button id="erase-btn">Borrar</button>
+    <div class="left-container">
+        <div class="button-container">
+            <button class="color-btn" data-color="#000000">Negro</button>
+            <button class="color-btn" data-color="#ff0000">Rojo</button>
+            <button class="color-btn" data-color="#00ff00">Verde</button>
+            <button class="color-btn" data-color="#0000ff">Azul</button>
+            <button class="color-btn" data-color="#ffff00">Amarillo</button>
+            <button class="color-btn" data-color="#ff00ff">Magenta</button>
+            <button class="color-btn" data-color="#00ffff">Aqua</button>
+        </div>
+    </div>
+
+    <!-- Lienzo -->
+    <div class="canvas">
+        <canvas id="pixel-canvas"></canvas>
+    </div>
+
+    <div class="right-container">
+        <!-- Botón de Borrar -->
+        <button id="erase-btn">Borrar</button>
+        <!-- Botón de Descargar -->
+        <button id="download-btn">Descargar</button>
+
+        <!-- Nueva sección para ajustar el tamaño del pincel -->
+        <div class="brush-container">
+            <label for="brush-size">Tamaño del Pincel:</label>
+            <input type="range" id="brush-size" min="1" max="10" step="1" value="1" />
+        </div>
+    </div>
 </div>
 
-<div class="center-container">
-    <button id="download-btn">Descargar</button>
+<!-- Instrucciones y guía para el usuario -->
+<div id="instructions">
+    <h2>Canvas de Zapatillas</h2>
+    <p>Utiliza los botones de colores para dibujar una zapatilla en el lienzo.</p>
+    <p>Para borrar un área, selecciona el botón "Borrar" y haz clic sobre los píxeles que deseas borrar.</p>
+    <p>Si deseas borrar todo el dibujo y comenzar de nuevo, utiliza el botón "Borrar Todo".</p>
+    <p>¡Diviértete creando tu diseño de zapatillas!</p>
 </div>
 
 <script src="../scripts/canva.js"></script>

@@ -1,13 +1,16 @@
 const canvas = document.getElementById('pixel-canvas');
 const ctx = canvas.getContext('2d');
-const pixelSize = 10;
-const canvasSize = 20;
+const pixelSize = 15;
+const canvasSize = 30;
 
 // Configuración inicial del lienzo
 canvas.width = canvasSize * pixelSize;
 canvas.height = canvasSize * pixelSize;
 ctx.fillStyle = '#ffffff';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+// Restablecemos el color de dibujo a negro
+ctx.fillStyle = '#000000';
 
 // Variables para el color y pincel seleccionado
 let selectedColor = '#000000';
@@ -96,5 +99,38 @@ colorButtons.forEach((button) => {
  * @param {Event} event - El evento de clic en el botón de borrar.
  * @return {void} No retorna ningún valor.
  */
-const eraseButton = document.getElementById('erase-btn');
-eraseButton.addEventListener('click', erase);
+
+
+// Función para borrar todo el canvas y comenzar de nuevo
+function eraseAll() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
+
+// Mostrar las instrucciones al cargar la página
+const instructionsContainer = document.getElementById('instructions');
+instructionsContainer.style.display = 'block';
+
+// Nueva variable para el tamaño del pincel
+let brushSize = 1;
+
+// Función para cambiar el tamaño del pincel
+function changeBrushSize(size) {
+    brushSize = size;
+}
+
+// Evento para cambiar el tamaño del pincel cuando se ajusta el input
+const brushSizeInput = document.getElementById('brush-size');
+brushSizeInput.addEventListener('input', () => {
+    changeBrushSize(brushSizeInput.value);
+});
+
+// Función para borrar todo el lienzo y resetearlo
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+

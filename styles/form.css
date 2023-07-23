@@ -1,112 +1,96 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
 }
 
-.container {
-    max-width: 100px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
+.canvas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-form {
-    display: grid;
-    gap: 10px;
+.left-container {
+    display: flex;
+    align-items: center;
 }
 
-label {
-    font-weight: bold;
+.color-btn-container {
+    display: flex;
+    align-items: center;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: 10%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-select {
-    appearance: none;
-    padding-right: 30px;
-    background-color: #4b3f68;
-    background-repeat: no-repeat;
-    background-position: right center;
+/* Estilos para el lienzo */
+#pixel-canvas {
+    border: 1px solid #000000;
 }
 
-input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
+/* Estilos para los botones de colores */
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    font-size: 12px;
 }
 
-input[type="submit"]:hover {
-    background-color: #45a049;
+#black-color {
+    background-color: #000;
 }
 
-.error {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+#red-color {
+    background-color: #ff0000;
 }
 
-/* Estilos específicos para detalles de tarjeta */
-#detallesTarjeta {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #222;
+#green-color {
+    background-color: #00ff00;
 }
 
-#detallesTarjeta label {
+#blue-color {
+    background-color: #0000ff;
+}
+
+/* Nuevos colores */
+#yellow-color {
+    background-color: #ffff00;
+}
+
+#magenta-color {
+    background-color: #ff00ff;
+}
+
+#aqua-color {
+    background-color: #00ffff;
+}
+
+.color-btn:hover {
+    border-color: #000;
+}
+
+/* Estilos para el medidor de la dimensión del pincel */
+.brush-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.brush-container label {
+    margin-right: 5px;
+}
+
+/* Estilos para los botones de borrar y descargar */
+#erase-btn,
+#download-btn {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #fff;
-}
-
-#detallesTarjeta input {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-}
-
-#totalText {
-    font-weight: bold;
-    display: none;
-    text-align: center;
-    margin-top: 10px;
-    color: #222;
+    margin: 10px 0;
+    font-size: 14px;
 }

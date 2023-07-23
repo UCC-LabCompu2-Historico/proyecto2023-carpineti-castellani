@@ -1,24 +1,47 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .canvas-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
-#pixel-canvas {
-    border: 1px solid #ffffff;
+.left-container {
+    display: flex;
+    align-items: center;
 }
 
-#download-btn {
-    display: block;
-    margin: 0 auto;
+.color-btn-container {
+    display: flex;
+    align-items: center;
 }
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el lienzo */
+#pixel-canvas {
+    border: 1px solid #000000;
+    display: block; /* Aseguramos que el lienzo se muestre como bloque */
+}
+
+/* Estilos para los botones de colores */
 .color-btn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     margin: 5px;
     cursor: pointer;
+    border: 2px solid transparent;
+    font-size: 12px;
 }
 
 #black-color {
@@ -35,4 +58,40 @@
 
 #blue-color {
     background-color: #0000ff;
+}
+
+/* Nuevos colores */
+#yellow-color {
+    background-color: #ffff00;
+}
+
+#magenta-color {
+    background-color: #ff00ff;
+}
+
+#aqua-color {
+    background-color: #00ffff;
+}
+
+.color-btn:hover {
+    border-color: #000;
+}
+
+/* Estilos para el medidor de la dimensión del pincel */
+.brush-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.brush-container label {
+    margin-right: 5px;
+}
+
+/* Estilos para los botones de borrar y descargar */
+#erase-btn,
+#download-btn {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
 }
