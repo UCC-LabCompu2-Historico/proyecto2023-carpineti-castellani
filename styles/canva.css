@@ -90,6 +90,7 @@ body {
 
 /* Estilos para los botones de borrar y descargar */
 #erase-btn,
+#undo-btn,
 #download-btn {
     display: block;
     margin: 10px 0;

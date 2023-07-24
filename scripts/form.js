@@ -20,6 +20,14 @@ function mostrarDetallesTarjeta() {
     }
 }
 
+/**
+ * Evento que se activa cuando el contenido del DOM (Document Object Model) ha sido completamente cargado.
+ * Obtiene los parámetros "name" y "price" de la URL y rellena los campos del formulario con dichos valores.
+ * Agrega eventos para calcular el total cuando cambie la cantidad y el servicio seleccionado.
+ * También agrega un evento para manejar el envío del formulario y mostrar un mensaje de agradecimiento.
+ * @method handleDOMContentLoaded
+ * @return {void} No retorna ningún valor.
+ */
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener parámetros de la URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -30,18 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("nombre").value = nombreZapatilla;
     document.getElementById("precio").value = precioZapatilla;
 
-    // Calcular el total cuando cambie la cantidad y el servicio
+    // Obtener elementos HTML para cálculo del total
     const cantidadInput = document.getElementById("cantidad");
     const servicioSelect = document.getElementById("servicio");
     const totalInput = document.getElementById("total");
     const totalText = document.getElementById("totalText");
 
+    // Agregar eventos para calcular el total cuando cambie la cantidad y el servicio seleccionado
     cantidadInput.addEventListener("input", calcularTotal);
     servicioSelect.addEventListener("change", calcularTotal);
 
     /**
-     * Calcula el total a pagar en función de la cantidad, precio de la zapatilla y el servicio seleccionado.
-     * @return {void} No retorna ningún valor.
+     Función para calcular el total a pagar en función de la cantidad, precio de la zapatilla y el servicio seleccionado.
+     @method calcularTotal
+     @return {void} No retorna ningún valor.
      */
     function calcularTotal() {
         const cantidad = parseInt(cantidadInput.value);
@@ -51,12 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         totalInput.value = "$" + total;
     }
 
-    // Mostrar el total a pagar en un texto después de enviar el formulario
     const form = document.getElementById("purchase-form");
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Evitar el envío del formulario por defecto
-
-        // Resto del código para el cálculo del total y otras acciones...
 
         // Mostrar el mensaje de agradecimiento después de enviar el formulario
         var mensajeGracias = document.getElementById("mensajeGracias");
@@ -69,6 +76,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/**
+ * Función que valida los campos del formulario antes de realizar una compra.
+ * Verifica que el campo "Email" tenga una dirección de correo electrónico válida según la expresión regular corregida.
+ * También valida que los campos obligatorios no estén vacíos y que aquellos campos numéricos contengan solo números.
+ * Si algún campo no cumple con las validaciones, muestra una alerta indicando el error y blanquea el campo "Email" si es inválido.
+ * Si todos los campos obligatorios están completos y son válidos, muestra un mensaje de agradecimiento por la compra y redirecciona al catálogo de zapatillas después de 5 segundos.
+ * @method validarFormulario
+ * @param {void} No recibe ningún parámetro explícito.
+ * @return {boolean} Retorna true si todos los campos son válidos y se puede realizar la compra, de lo contrario, retorna false.
+ */
 function validarFormulario() {
     var nombreCliente = document.getElementById("nombreCliente");
     var email = document.getElementById("email");
