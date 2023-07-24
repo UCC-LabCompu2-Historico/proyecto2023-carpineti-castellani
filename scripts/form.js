@@ -96,7 +96,11 @@ function validarFormulario() {
     var direccionFacturacion = document.getElementById("direccionFacturacion");
     var codigoSeguridad = document.getElementById("codigoSeguridad");
 
-    // Validar el campo "Email" con la expresión regular corregida
+    /**
+     * Validar el campo "Email" con una expresión regular corregida.
+     * @method validateEmail
+     * @return {boolean} Devuelve `false` si la dirección de correo electrónico es inválida, de lo contrario, devuelve `true`.
+     */
     var email = document.getElementById("email").value;
     var emailRegex = /^[a-zA-Z0-9._%+-]+@(outlook\.com|gmail\.com|hotmail\.com|yahoo\.com)$/i;
     if (!emailRegex.test(email)) {
@@ -163,7 +167,11 @@ function validarFormulario() {
         return false;
     }
 
-    // Mostrar mensaje de agradecimiento y redireccionar después de 5 segundos
+    /**
+     * Mostrar mensaje de agradecimiento y redireccionar después de 5 segundos.
+     * @method showThankYouMessageAndRedirect
+     * @return {void} No retorna ningún valor.
+     */
     alert("Muchas gracias por su compra, le hemos enviado el resumen de compra a su e-mail sobre el envío y facturación, entre otros.\nSera redireccionado al catalogo de zapatillas en 5 segundos.");
     setTimeout(function () {
         window.location.href = "./main.html"; // Ruta a la página del catálogo de zapatillas

@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    position: relative; /* Agregamos esta línea */
 }
 
 .left-container {
@@ -102,19 +103,44 @@ body {
     position: relative;
 }
 
+/* Estilos para los botones de Detener animación e INSPIRATE */
+#stop-animation-btn,
 #start-animation-btn {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 8px 16px;
     background-color: #007bff;
     color: #ffffff;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    margin: 7px;
+    font-size: 14px;
 }
 
+#stop-animation-btn:hover,
 #start-animation-btn:hover {
     background-color: #0056b3;
+}
+
+/* Posicionamiento de los botones uno al lado del otro */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Agregamos esta línea para centrar verticalmente los botones */
+    margin-top: 10px;
+}
+
+/* Estilos para el botón INSPIRATE */
+#start-animation-btn {
+    position: absolute;
+    bottom: 0.5px;
+    left: 11.5%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para el botón INSPIRATE */
+#stop-animation-btn {
+    position: absolute;
+    bottom: 1px;
+    left: 86%;
+    transform: translateX(-50%);
 }

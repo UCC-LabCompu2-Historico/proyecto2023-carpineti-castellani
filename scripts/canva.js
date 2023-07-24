@@ -253,17 +253,49 @@ function animateCanvas() {
 animateCanvas();
 
 
-// Función para mostrar el mensaje de inspiración y ocultar el botón "INSPIRATE".
+/**
+ * Función para mostrar el mensaje de inspiración y ocultar el botón "INSPIRATE".
+ * @method showInspirationMessage
+ * @return {void} No retorna ningún valor.
+ */
 function showInspirationMessage() {
     const messageContainer = document.getElementById('message-container');
-    messageContainer.textContent = "Una vez te hayas inspirado, reinicia la página para poder comenzar a crear tu diseño. ¡Éxitos!";
+    messageContainer.textContent = "Interesante combinacion de colores. De ser que no te convenza, reinicia la pagina e intentalo de nuevo. EXITOS!."
     messageContainer.style.display = 'block';
-    document.getElementById('start-animation-btn').style.display = 'none';
+
+    // Ocultar el botón "INSPIRATE"
+    const startAnimationBtn = document.getElementById('start-animation-btn');
+    startAnimationBtn.style.display = 'none';
+
+    // Mostrar el botón "Detener"
+    const stopAnimationBtn = document.getElementById('stop-animation-btn');
+    stopAnimationBtn.style.display = 'inline-block';
 }
 
-// Agregar evento de clic al botón "Iniciar animación" para iniciar la animación y mostrar el mensaje.
+/**
+ * Evento que activa la opción de inspiración al hacer clic en el botón "INSPIRATE".
+ * @method handleStartAnimationButtonClick
+ * @param {Event} event - El evento de clic en el botón "INSPIRATE".
+ * @return {void} No retorna ningún valor.
+ */
 document.getElementById('start-animation-btn').addEventListener('click', () => {
     isAnimating = true; // Activar la animación
     animateCanvas(); // Iniciar la animación
-    showInspirationMessage(); // Mostrar el mensaje de inspiración
+    showInspirationMessage(); // Mostrar mensaje de inspiración y ocultar botón "INSPIRATE"
+});
+
+/**
+ * Evento que detiene la animación al hacer clic en el botón "Detener".
+ * @method handleStopAnimationButtonClick
+ * @param {Event} event - El evento de clic en el botón "Detener".
+ * @return {void} No retorna ningún valor.
+ */
+document.getElementById('stop-animation-btn').addEventListener('click', () => {
+    isAnimating = false; // Desactivar la animación
+    // Volver a mostrar el botón "INSPIRATE"
+    const startAnimationBtn = document.getElementById('start-animation-btn');
+    startAnimationBtn.style.display = 'inline-block';
+    // Ocultar el botón "Detener"
+    const stopAnimationBtn = document.getElementById('stop-animation-btn');
+    stopAnimationBtn.style.display = 'none';
 });
