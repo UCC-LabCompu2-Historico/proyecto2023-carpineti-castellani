@@ -11,11 +11,9 @@ function mostrarDetallesTarjeta() {
 
     if (metodoPago === "efectivo") {
         detallesTarjeta.style.display = "none";
-    }
-    else if (metodoPago === "null") {
+    } else if (metodoPago === "null") {
         detallesTarjeta.style.display = "none";
-    }
-    else {
+    } else {
         detallesTarjeta.style.display = "block";
     }
 }

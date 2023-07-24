@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="author" content="Castellani Franco y Carpineti Octavio" />
-    <meta name="description" content="Tienda online de zapatillas de lujo en Argentina" />
-    <meta name="keyword" content="Drip, Zapatillas, Sneakers, Vestimenta, Canva" />
+    <meta name="author" content="Castellani Franco y Carpineti Octavio"/>
+    <meta name="description" content="Tienda online de zapatillas de lujo en Argentina"/>
+    <meta name="keyword" content="Drip, Zapatillas, Sneakers, Vestimenta, Canva"/>
     <meta charset="UTF-8">
     <title>$neakers</title>
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/singupLogin.css">
-    <link rel="stylesheet" href="../styles/canva.css" />
+    <link rel="stylesheet" href="../styles/canva.css"/>
     <link rel="icon" type="image/png" href="../ico.ico">    <!-- Favicon -->
 </head>
 <body>
@@ -42,6 +42,13 @@
     <!-- Lienzo -->
     <div class="canvas">
         <canvas id="pixel-canvas"></canvas>
+        <!-- Botón de Iniciar animación -->
+        <button id="start-animation-btn">INSPIRATE</button>
+    </div>
+
+    <!-- Contenedor para el mensaje de inspiración -->
+    <div id="message-container" style="display: none;">
+        <p>Una vez te hayas inspirado lo suficiente, reinicia la página para poder comenzar a crear tu diseño. ¡Éxitos!</p>
     </div>
 
     <div class="right-container">
@@ -51,11 +58,10 @@
         <button id="undo-btn">Deshacer</button>
         <!-- Botón de Descargar -->
         <button id="download-btn">Descargar</button>
-
         <!-- Nueva sección para ajustar el tamaño del pincel -->
         <div class="brush-container">
             <label for="brush-size">Tamaño del Pincel:</label>
-            <input type="range" id="brush-size" min="1" max="10" step="1" value="1" />
+            <input type="range" id="brush-size" min="1" max="10" step="1" value="1"/>
         </div>
     </div>
 </div>
@@ -65,7 +71,8 @@
     <h2>Diseña tu propio modelo de Zapatillas en 8 bits</h2>
     <p>Utiliza los botones de colores para dibujar una zapatilla en el lienzo.</p>
     <p>Para borrar un área, selecciona el botón "Borrar" y haz clic sobre los píxeles que deseas borrar.</p>
-    <p>Presiona el boton "Deshacer" para revertir la ultima modificacion, sin tener que utilizar el boton "Borrar" Pixel x Pixel.</p>
+    <p>Presiona el boton "Deshacer" para revertir la ultima modificacion, sin tener que utilizar el boton "Borrar" Pixel
+        x Pixel.</p>
     <p>Si te gustaria guardar tu diseño creado, presiona "Descargar", y se te descargara una imagen del mismo.</p>
     <p>¡Diviértete creando tu diseño de zapatillas!</p>
 </div>

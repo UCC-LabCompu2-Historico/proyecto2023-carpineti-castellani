@@ -45,10 +45,12 @@ button {
 button:hover {
     background-color: #000000;
     transform: scale(0.9);
-}body {
-     background-color: #1a1919f8;
-     font-family: Arial, sans-serif;
- }
+}
+
+body {
+    background-color: #1a1919f8;
+    font-family: Arial, sans-serif;
+}
 
 .container {
     margin: 0 auto;

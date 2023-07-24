@@ -55,7 +55,7 @@ function getCursorPosition(event) {
     const rect = canvas.getBoundingClientRect();
     const x = Math.floor((event.clientX - rect.left) / pixelSize);
     const y = Math.floor((event.clientY - rect.top) / pixelSize);
-    return { x, y };
+    return {x, y};
 }
 
 /**
@@ -66,7 +66,7 @@ function getCursorPosition(event) {
  * @return {void} No retorna ningún valor.
  */
 canvas.addEventListener('click', (event) => {
-    const { x, y } = getCursorPosition(event);
+    const {x, y} = getCursorPosition(event);
     if (isErasing) {
         ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
     } else {
@@ -118,7 +118,7 @@ function undo() {
 
         // Cargar la última imagen de la pila en el lienzo
         const lastCanvasImage = new Image();
-        lastCanvasImage.onload = function() {
+        lastCanvasImage.onload = function () {
             ctx.drawImage(lastCanvasImage, 0, 0);
         };
         lastCanvasImage.src = canvasStack[canvasStack.length - 1];
@@ -205,3 +205,65 @@ function downloadCanvas() {
  @return {void} No retorna ningún valor.
  */
 document.getElementById('download-btn').addEventListener('click', downloadCanvas);
+
+let isAnimating = false; // Variable para controlar el estado de la animación
+
+/**
+ * Función para obtener un color aleatorio en formato hexadecimal.
+ * @method getRandomColor
+ * @return {string} Un color en formato hexadecimal.
+ */
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+/**
+ * Función para animar el lienzo utilizando requestAnimationFrame.
+ * @method animateCanvas
+ * @return {void} No retorna ningún valor.
+ */
+function animateCanvas() {
+    if (!isAnimating) {
+        return;
+    }
+
+    // Generar coordenadas aleatorias para el píxel a cambiar de color
+    const x = Math.floor(Math.random() * canvasSize);
+    const y = Math.floor(Math.random() * canvasSize);
+
+    // Obtener el color actual del píxel en esa coordenada
+    const currentColor = ctx.fillStyle;
+
+    // Generar un nuevo color aleatorio
+    const newColor = getRandomColor();
+
+    // Cambiar el color del píxel en esa coordenada por el nuevo color aleatorio
+    drawPixel(x, y, newColor);
+
+    // Llamar a animateCanvas() nuevamente para generar una animación continua
+    requestAnimationFrame(animateCanvas);
+}
+
+// Llamar a animateCanvas() para iniciar la animación
+animateCanvas();
+
+
+// Función para mostrar el mensaje de inspiración y ocultar el botón "INSPIRATE".
+function showInspirationMessage() {
+    const messageContainer = document.getElementById('message-container');
+    messageContainer.textContent = "Una vez te hayas inspirado, reinicia la página para poder comenzar a crear tu diseño. ¡Éxitos!";
+    messageContainer.style.display = 'block';
+    document.getElementById('start-animation-btn').style.display = 'none';
+}
+
+// Agregar evento de clic al botón "Iniciar animación" para iniciar la animación y mostrar el mensaje.
+document.getElementById('start-animation-btn').addEventListener('click', () => {
+    isAnimating = true; // Activar la animación
+    animateCanvas(); // Iniciar la animación
+    showInspirationMessage(); // Mostrar el mensaje de inspiración
+});

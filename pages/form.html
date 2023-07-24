@@ -1,113 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta name="author" content="Castellani Franco y Carpineti Octavio"/>
-  <meta name="description" content="Tienda online de zapatillas de lujo en Argentina"/>
-  <meta name="keyword" content="Drip, Zapatillas, Sneakers, Vestimenta"/>
-  <meta charset="UTF-8">
-  <title>$neakers</title>
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/singupLogin.css">
-  <link rel="stylesheet" href="../styles/form.css">
-  <link rel="icon" type="image/png" href="../ico.ico">    <!-- Favicon -->
-  <link rel="stylesheet" href="../styles/form.css">
-  <link rel="stylesheet" href="../styles/style.css">
-  <script src="../scripts/form.js"></script>
+    <meta name="author" content="Castellani Franco y Carpineti Octavio"/>
+    <meta name="description" content="Tienda online de zapatillas de lujo en Argentina"/>
+    <meta name="keyword" content="Drip, Zapatillas, Sneakers, Vestimenta"/>
+    <meta charset="UTF-8">
+    <title>$neakers</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/singupLogin.css">
+    <link rel="stylesheet" href="../styles/form.css">
+    <link rel="icon" type="image/png" href="../ico.ico">    <!-- Favicon -->
+    <link rel="stylesheet" href="../styles/form.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/form.js"></script>
 </head>
 <body>
 
 <header>
-  <nav>    <!-- Etiqueta de navegacion -->
-    <ul>
-      <!-- Menú de navegación que contiene cuatro elementos: “Inicio”, “Zapatillas”, “Sobre Nosotros” y “Contacto” -->
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="./main.html">Zapatillas</a></li>
-      <li><a href="./aboutUs.html">Sobre Nosotros</a></li>
-      <li><a href="./contact.html">Contacto</a></li>
-      <li><a href="./login.html">Log in</a></li>
-      <li><a href="./canva.html">Crea tu diseño</a></li>
-    </ul>
-    <!-- Contiene listado los elementos de navegacion representados por ('<li>'), de los cuales poseen un enlace ('<a>') que apunta a diferentes secciones de la pagina -->
-  </nav>
+    <nav>    <!-- Etiqueta de navegacion -->
+        <ul>
+            <!-- Menú de navegación que contiene cuatro elementos: “Inicio”, “Zapatillas”, “Sobre Nosotros” y “Contacto” -->
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./main.html">Zapatillas</a></li>
+            <li><a href="./aboutUs.html">Sobre Nosotros</a></li>
+            <li><a href="./contact.html">Contacto</a></li>
+            <li><a href="./login.html">Log in</a></li>
+            <li><a href="./canva.html">Crea tu diseño</a></li>
+        </ul>
+        <!-- Contiene listado los elementos de navegacion representados por ('<li>'), de los cuales poseen un enlace ('<a>') que apunta a diferentes secciones de la pagina -->
+    </nav>
 </header>
 
 <h1>Formulario de Compra</h1>
 <form id="purchase-form" action="form.html" method="POST" onsubmit="return validarFormulario()">
-  <!-- Contenido del formulario -->
-  <div>
-    <label for="nombreCliente">Nombre y Apellido:</label>
-    <input type="text" id="nombreCliente" name="nombreCliente" />
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" />
-  </div>
-  <div>
-    <label for="cp">Código Postal:</label>
-    <input type="text" id="cp" name="cp"  />
-  </div>
-  <div>
-    <label for="ciudad">Ciudad:</label>
-    <input type="text" id="ciudad" name="ciudad"  />
-  </div>
-  <div>
-    <label for="direccion">Dirección y Altura:</label>
-    <input type="text" id="direccion" name="direccion"  />
-  </div>
-  <div>
+    <!-- Contenido del formulario -->
     <div>
-      <label for="nombre">Modelo de Zapatilla:</label>
-      <input type="text" id="nombre" name="nombre" readonly />
+        <label for="nombreCliente">Nombre y Apellido:</label>
+        <input type="text" id="nombreCliente" name="nombreCliente"/>
     </div>
-    <label for="precio">Precio del modelo:</label>
-    <input type="text" id="precio" name="precio" readonly />
-  </div>
-  <div>
-    <label for="talle">talle:</label>
-    <input type="number" id="talle" name="talle" min="35" max="45"/>
-  </div>
-  <div>
-    <label for="cantidad">Cantidad:</label>
-    <input type="number" id="cantidad" name="cantidad" min="1" value="1" />
-  </div>
-  <div>
-    <label for="servicio">Método de Envío:</label>
-    <select id="servicio">
-      <option value="175">Correo privado : $170 </option>
-      <option value="90">Correo argentino : $90 </option>
-    </select>
-  </div>
-  <label for="metodoPago">Método de Pago:</label>
-  <select id="metodoPago" name="metodoPago" onchange="mostrarDetallesTarjeta()">
-    <option value="null"></option>
-    <option value="tarjeta">Tarjeta de Crédito</option>
-    <option value="tarjeta">Tarjeta de Debito</option>
-    <option value="efectivo">Efectivo</option>
-  </select><br><br>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"/>
+    </div>
+    <div>
+        <label for="cp">Código Postal:</label>
+        <input type="text" id="cp" name="cp"/>
+    </div>
+    <div>
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad"/>
+    </div>
+    <div>
+        <label for="direccion">Dirección y Altura:</label>
+        <input type="text" id="direccion" name="direccion"/>
+    </div>
+    <div>
+        <div>
+            <label for="nombre">Modelo de Zapatilla:</label>
+            <input type="text" id="nombre" name="nombre" readonly/>
+        </div>
+        <label for="precio">Precio del modelo:</label>
+        <input type="text" id="precio" name="precio" readonly/>
+    </div>
+    <div>
+        <label for="talle">talle:</label>
+        <input type="number" id="talle" name="talle" min="35" max="45"/>
+    </div>
+    <div>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" value="1"/>
+    </div>
+    <div>
+        <label for="servicio">Método de Envío:</label>
+        <select id="servicio">
+            <option value="175">Correo privado : $170</option>
+            <option value="90">Correo argentino : $90</option>
+        </select>
+    </div>
+    <label for="metodoPago">Método de Pago:</label>
+    <select id="metodoPago" name="metodoPago" onchange="mostrarDetallesTarjeta()">
+        <option value="null"></option>
+        <option value="tarjeta">Tarjeta de Crédito</option>
+        <option value="tarjeta">Tarjeta de Debito</option>
+        <option value="efectivo">Efectivo</option>
+    </select><br><br>
 
-  <div id="detallesTarjeta" style="display: none;">
-    <label for="numeroTarjeta">Número de Tarjeta:</label>
-    <input type="text" id="numeroTarjeta" name="numeroTarjeta"><br><br>
+    <div id="detallesTarjeta" style="display: none;">
+        <label for="numeroTarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjeta" name="numeroTarjeta"><br><br>
 
-    <label for="vencimientoTarjeta">Fecha de Vencimiento:</label>
-    <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta"><br><br>
+        <label for="vencimientoTarjeta">Fecha de Vencimiento:</label>
+        <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta"><br><br>
 
-    <label for="titularTarjeta">Titular de Tarjeta:</label>
-    <input type="text" id="titularTarjeta" name="titularTarjeta"><br><br>
+        <label for="titularTarjeta">Titular de Tarjeta:</label>
+        <input type="text" id="titularTarjeta" name="titularTarjeta"><br><br>
 
-    <label for="direccionFacturacion">Dirección de Facturación:</label>
-    <input type="text" id="direccionFacturacion" name="direccionFacturacion"><br><br>
+        <label for="direccionFacturacion">Dirección de Facturación:</label>
+        <input type="text" id="direccionFacturacion" name="direccionFacturacion"><br><br>
 
-    <label for="codigoSeguridad">Código de Seguridad:</label>
-    <input type="text" id="codigoSeguridad" name="codigoSeguridad"><br><br>
-  </div>
-  <div>
-    <label for="total">Total a Pagar:</label>
-    <input type="text" id="total" name="total" readonly />
-  </div>
-  <div>
-    <input type="submit" value="Realizar Compra" />
-  </div>
+        <label for="codigoSeguridad">Código de Seguridad:</label>
+        <input type="text" id="codigoSeguridad" name="codigoSeguridad"><br><br>
+    </div>
+    <div>
+        <label for="total">Total a Pagar:</label>
+        <input type="text" id="total" name="total" readonly/>
+    </div>
+    <div>
+        <input type="submit" value="Realizar Compra"/>
+    </div>
 </form>
 </body>
 </html>
