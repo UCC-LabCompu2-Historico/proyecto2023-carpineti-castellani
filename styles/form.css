@@ -94,3 +94,13 @@ body {
     margin: 10px 0;
     font-size: 14px;
 }
+
+/* Estilos para los elementos del formulario */
+.form-group {
+    margin-bottom: 10px;
+}
+
+/* Espacio entre cada grupo de elementos */
+#detallesTarjeta .form-group {
+    margin-bottom: 20px;
+}
