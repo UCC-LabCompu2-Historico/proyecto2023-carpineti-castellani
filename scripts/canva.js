@@ -1,20 +1,18 @@
-//Obtencion del lienzo
+//Obtencion del lienzo del DOM y su contexto ctx
 const canvas = document.getElementById('pixel-canvas');
 const ctx = canvas.getContext('2d');
+
+// Configuración inicial del lienzo y se establece el color de dibujo a negro
 const pixelSize = 15;
 const canvasSize = 30;
 const canvasStack = []; // Pila para almacenar las imágenes del lienzo
-
-// Configuración inicial del lienzo
 canvas.width = canvasSize * pixelSize;
 canvas.height = canvasSize * pixelSize;
 ctx.fillStyle = '#ffffff';
 ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-// Restablecemos el color de dibujo a negro
 ctx.fillStyle = '#000000';
 
-
+//Estas variables se utilizan para gestionar el color de dibujo seleccionado y la opción de borrado.
 const eraseColor = '#ffffff';// Variable para el color de borrado (blanco)
 let selectedColor = '#ffffff';// Variables para el color y pincel seleccionado
 let isErasing = false;
@@ -29,11 +27,14 @@ let isErasing = false;
  */
 function drawPixel(x, y, color) {
     // Usar el color seleccionado o el color de borrado según el modo
+    //determina qué color se utilizará para dibujar el píxel. Si isErasing es true, se usará el color de borrado (eraseColor)
     const fillColor = isErasing ? eraseColor : color;
     ctx.fillStyle = fillColor;
+    //dibuja el píxel en las coordenadas especificadas (x, y) en el lienzo.
     ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
 
     // Ajustar la ubicación y el tamaño del rectángulo según el tamaño del pincel
+    //Math.floor() en el cálculo es para asegurarse de que halfBrushSize sea un número entero. Redondea hacia abajo
     const halfBrushSize = Math.floor(brushSize / 2);
     for (let i = x - halfBrushSize; i <= x + halfBrushSize; i++) {
         for (let j = y - halfBrushSize; j <= y + halfBrushSize; j++) {
@@ -42,7 +43,9 @@ function drawPixel(x, y, color) {
     }
 
     // Guardar una copia de la imagen actual en la pila
+    //Toma una imagen de lo que se dibuja y lo convierte en un URL
     const canvasImage = canvas.toDataURL('image/png');
+    //La pila canvasStack se utiliza para almacenar copias del contenido del lienzo
     canvasStack.push(canvasImage);
 }
 
@@ -53,7 +56,10 @@ function drawPixel(x, y, color) {
  * @return {Object} Un objeto con las propiedades x e y que representan las coordenadas.
  */
 function getCursorPosition(event) {
+    //obtiene el rectángulo (bounding box) del elemento canvas
     const rect = canvas.getBoundingClientRect();
+    //coordenada x dentro del lienzo utilizando el evento de clic (event.clientX) y la p
+    //Posición izquierda del rectángulo del lienzo (rect.left)
     const x = Math.floor((event.clientX - rect.left) / pixelSize);
     const y = Math.floor((event.clientY - rect.top) / pixelSize);
     return {x, y};
@@ -66,7 +72,8 @@ function getCursorPosition(event) {
  * @param {Event} event - El evento de clic en el lienzo.
  * @return {void} No retorna ningún valor.
  */
-canvas.addEventListener('click', (event) => {
+
+canvas.addEventListener('click', (event) => { //agrega un event listener
     const {x, y} = getCursorPosition(event);
     if (isErasing) {
         ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
@@ -109,19 +116,23 @@ function erase() {
  * @return {void} No retorna ningún valor.
  */
 function undo() {
-    // Verificar que haya al menos una imagen en la pila
+    // Verificar que haya al menos una imagen en la pila canvasStack
     if (canvasStack.length > 0) {
-        // Retirar la última imagen de la pila
+        // Retirar la última imagen de la pila con pop(), eliminando la ultima copia
         canvasStack.pop();
 
         // Limpiar el lienzo. Asegura que el lienzo esté en blanco y listo para cargar la última imagen de la pila.
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // Cargar la última imagen de la pila en el lienzo
+        // Se crea un nuevo objeto de imagen llamado lastCanvasImage
         const lastCanvasImage = new Image();
+        //Este evento ´onload´ se activa cuando la imagen se ha cargado completamente
         lastCanvasImage.onload = function () {
-            ctx.drawImage(lastCanvasImage, 0, 0);
+            ctx.drawImage(lastCanvasImage, 0, 0); //Esquina sup izq
         };
+        //Antes de asignar la fuente (src) de la imagen lastCanvasImage, se obtiene la última imagen
+        // almacenada en la pila (que es la imagen que se quiere deshacer).
         lastCanvasImage.src = canvasStack[canvasStack.length - 1];
     }
 }
@@ -133,7 +144,6 @@ function undo() {
  * @return {void} No retorna ningún valor.
  */
 document.getElementById('undo-btn').addEventListener('click', undo);
-
 
 /**
  * Cambia el color seleccionado para dibujar en el lienzo al hacer clic en un botón de color.
@@ -193,8 +203,10 @@ brushSizeInput.addEventListener('input', () => {
  @return {void} No retorna ningún valor.
  */
 function downloadCanvas() {
+    //Se crea el elemento a que se guarda en link
     const link = document.createElement('a');
     link.download = 'Diseño $neakers.png';
+    //devuelve la representación del contenido del lienzo como una URL de datos en formato PNG.
     link.href = canvas.toDataURL('image/png');
     link.click();
 }

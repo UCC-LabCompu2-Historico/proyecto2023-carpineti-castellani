@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
      @return {void} No retorna ningún valor.
      */
     function calcularTotal() {
+        //parseInt() se utiliza para convertir el valor contenido en el elemento cantidadInput en un número entero
         const cantidad = parseInt(cantidadInput.value);
         const precio = parseInt(precioZapatilla);
         const servicio = parseInt(servicioSelect.value);
@@ -59,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
         totalInput.value = "$" + total;
     }
 
+    //Aquí, se selecciona el formulario mediante su ID "purchase-form" y se almacena en la variable form.
     const form = document.getElementById("purchase-form");
+    //Cuando el formulario es enviado, la función que se proporciona como segundo argumento se ejecutará.
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Evitar el envío del formulario por defecto
 
@@ -102,9 +105,13 @@ function validarFormulario() {
      * @return {boolean} Devuelve `false` si la dirección de correo electrónico es inválida, de lo contrario, devuelve `true`.
      */
     var email = document.getElementById("email").value;
+    //expresión regular (emailRegex) que valida las direcciones de correo electrónico permitidas. Solo se aceptan direcciones de correo con dominios "outlook.com", "gmail.com", "hotmail.com" o "yahoo.com".
     var emailRegex = /^[a-zA-Z0-9._%+-]+@(outlook\.com|gmail\.com|hotmail\.com|yahoo\.com)$/i;
     if (!emailRegex.test(email)) {
         alert("Por favor, ingrese una dirección de correo electrónico válida.");
+        //Se blanquea el campo de correo electrónico para borrar el valor incorrecto ingresado por el usuario.
+        // return false;: Se retorna false para evitar que el formulario se envíe
+        // en caso de que se haya ingresado un correo electrónico no válido
         document.getElementById("email").value = ""; // Blanquear el campo "Email"
         return false;
     }
@@ -174,6 +181,7 @@ function validarFormulario() {
      */
     alert("Muchas gracias por su compra, le hemos enviado el resumen de compra a su e-mail sobre el envío y facturación, entre otros.\nSera redireccionado al catalogo de zapatillas en 5 segundos.");
     setTimeout(function () {
+        //redirecciona al usuario a la página del catálogo de zapatillas. 
         window.location.href = "./main.html"; // Ruta a la página del catálogo de zapatillas
     }, 5000); // 5000 milisegundos = 5 segundos
 
