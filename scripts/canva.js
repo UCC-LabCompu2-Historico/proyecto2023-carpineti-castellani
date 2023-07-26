@@ -1,3 +1,4 @@
+//Obtencion del lienzo
 const canvas = document.getElementById('pixel-canvas');
 const ctx = canvas.getContext('2d');
 const pixelSize = 15;
