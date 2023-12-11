@@ -2,7 +2,7 @@
 
 Este proyecto consiste en la creación de una página web para satisfacer las necesidades de una comunidad de coleccionistas de zapatillas exclusivas en Argentina.
 Creando esta pagina le permitimos el acceso a miles de usuarios a un catálogo de zapatillas exclusivas, con la posibilidad de comprarlas y recibirlas en su domicilio.
-Sin la necesidad de preocuparse por las cuestiones de importación y aduana. ademas de poder pagar en cuotas y con tarjeta de crédito. 
+Sin la necesidad de preocuparse por las cuestiones de importación y aduana. Además de poder pagar en cuotas y con tarjeta de crédito. 
 
 Al abrir la página, se nos redirige a una pestaña de menú que nos permite seleccionar diferentes opciones entre los menús disponibles.
 
