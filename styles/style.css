@@ -155,3 +155,37 @@ nav ul li a:hover {
 header {
     background-color: lightblue;
 }
+.contacto {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.btn-enviar {
+    height: 50px;
+    width: 150px;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.input-emailcontact {
+    height: 1rem;
+    width: 30%;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 10rem;
+    width: 30%;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}

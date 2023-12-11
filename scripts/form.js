@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Mostrar el mensaje de agradecimiento después de enviar el formulario
         var mensajeGracias = document.getElementById("mensajeGracias");
-        mensajeGracias.style.display = "block";
 
         // Redireccionar al catálogo de zapatillas después de 5 segundos
         setTimeout(function () {
