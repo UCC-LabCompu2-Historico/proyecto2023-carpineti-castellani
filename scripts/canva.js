@@ -312,3 +312,144 @@ document.getElementById('stop-animation-btn').addEventListener('click', () => {
     const stopAnimationBtn = document.getElementById('stop-animation-btn');
     stopAnimationBtn.style.display = 'none';
 });
+
+let isMouseDown = false;
+
+// Agregar evento para el movimiento del mouse
+canvas.addEventListener('mousemove', (event) => {
+    if (isMouseDown) {
+        const { x, y } = getCursorPosition(event);
+        if (isErasing) {
+            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+        } else {
+            drawPixel(x, y, selectedColor);
+        }
+    }
+});
+
+// Agregar eventos para el inicio y fin del clic del mouse
+canvas.addEventListener('mousedown', () => {
+    isMouseDown = true;
+});
+
+canvas.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+// Configuración inicial del lienzo y se establece el color de dibujo a negro
+const initialPixelSize = 15;  // Grosor inicial del píxel
+
+/**
+ * Función que dibuja un píxel en las coordenadas especificadas con el color dado y el tamaño del pincel.
+ * @method drawPixel
+ * @param {number} x - La coordenada x del píxel.
+ * @param {number} y - La coordenada y del píxel.
+ * @param {string} color - El color del píxel en formato hexadecimal.
+ * @return {void} No retorna ningún valor.
+ */
+function drawPixel(x, y, color) {
+    // Usar el color seleccionado o el color de borrado según el modo
+    const fillColor = isErasing ? eraseColor : color;
+    ctx.fillStyle = fillColor;
+
+    // Ajustar la ubicación y el tamaño del rectángulo según el tamaño del pincel
+    const halfBrushSize = Math.floor(brushSize / 2);
+    for (let i = x - halfBrushSize; i <= x + halfBrushSize; i++) {
+        for (let j = y - halfBrushSize; j <= y + halfBrushSize; j++) {
+            ctx.fillRect(i * pixelSize, j * pixelSize, pixelSize, pixelSize);
+        }
+    }
+
+    // Guardar una copia de la imagen actual en la pila
+    const canvasImage = canvas.toDataURL('image/png');
+    canvasStack.push(canvasImage);
+}
+
+
+/**
+ * Cambia el tamaño del pincel utilizado para dibujar en el lienzo.
+ * @method changeBrushSize
+ * @param {number} size - El nuevo tamaño del pincel.
+ * @return {void} No retorna ningún valor.
+ */
+
+
+// Agregar evento para el movimiento del mouse
+canvas.addEventListener('mousemove', (event) => {
+    if (isMouseDown) {
+        const { x, y } = getCursorPosition(event);
+        if (isErasing) {
+            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+        } else {
+            drawPixel(x, y, selectedColor);
+        }
+    }
+});
+
+// Agregar eventos para el inicio y fin del clic del mouse
+canvas.addEventListener('mousedown', () => {
+    isMouseDown = true;
+});
+
+canvas.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+/**
+ * Función que dibuja un píxel en las coordenadas especificadas con el color dado y el tamaño del pincel.
+ * @method drawPixel
+ * @param {number} x - La coordenada x del píxel.
+ * @param {number} y - La coordenada y del píxel.
+ * @param {string} color - El color del píxel en formato hexadecimal.
+ * @return {void} No retorna ningún valor.
+ */
+function drawPixel(x, y, color) {
+    // Usar el color seleccionado o el color de borrado según el modo
+    const fillColor = isErasing ? eraseColor : color;
+    ctx.fillStyle = fillColor;
+
+    // Ajustar la ubicación y el tamaño del rectángulo según el tamaño del pincel
+    const halfBrushSize = Math.floor(brushSize / 2);
+    for (let i = x - halfBrushSize; i <= x + halfBrushSize; i++) {
+        for (let j = y - halfBrushSize; j <= y + halfBrushSize; j++) {
+            ctx.fillRect(i * pixelSize, j * pixelSize, pixelSize, pixelSize);
+        }
+    }
+
+    // Guardar una copia de la imagen actual en la pila
+    const canvasImage = canvas.toDataURL('image/png');
+    canvasStack.push(canvasImage);
+}
+
+/**
+ * Funcion que activa la opción de borrado en el lienzo. Guarda una copia de la imagen actual del lienzo en la pila "canvasStack".
+ * @method erase
+ * @param {void}  No recibe ningún parámetro.
+ * @return {void} No retorna ningún valor.
+ */
+function erase() {
+    isErasing = !isErasing; // Alternar entre modo borrado y modo dibujo
+    // Establecer el color de dibujo como el color de borrado
+    ctx.fillStyle = isErasing ? eraseColor : selectedColor;
+
+    // Guardar una copia de la imagen actual en la pila
+    const canvasImage = canvas.toDataURL('image/png');
+    canvasStack.push(canvasImage);
+
+    // Actualizar el tamaño del pincel en el selector
+    brushSizeInput.value = isErasing ? 2 : initialPixelSize;
+    // Cambiar el tamaño del pincel
+    changeBrushSize(brushSizeInput.value);
+}
+
+// Evento para cambiar el tamaño del pincel cuando se ajusta el input
+
+/**
+ * Evento que cambia el tamaño del pincel al ajustar el valor del campo de entrada.
+ * @method handleBrushSizeInputChange
+ * @param {Event} event - El evento de entrada, activado cuando el usuario modifica el valor del campo.
+ * @return {void} No retorna ningún valor.
+ */
+brushSizeInput.addEventListener('input', () => {
+    changeBrushSize(brushSizeInput.value);
+});

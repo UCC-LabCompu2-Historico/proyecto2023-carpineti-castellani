@@ -9,7 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    position: relative; /* Agregamos esta línea */
+    position: relative;
 }
 
 .left-container {
@@ -31,18 +31,18 @@ body {
 /* Estilos para el lienzo */
 #pixel-canvas {
     border: 1px solid #000000;
-    display: block; /* Aseguramos que el lienzo se muestre como bloque */
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* Estilos para los botones de colores */
 .color-btn {
-    width: 30px;
-    height: 30px;
+    height: 50px;
     border-radius: 50%;
     margin: 5px;
     cursor: pointer;
     border: 2px solid transparent;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 #black-color {
@@ -125,7 +125,7 @@ body {
 .buttons-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Agregamos esta línea para centrar verticalmente los botones */
+    align-items: center;
     margin-top: 10px;
 }
 
