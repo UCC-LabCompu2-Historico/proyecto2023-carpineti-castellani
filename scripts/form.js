@@ -3,7 +3,6 @@
  * @method mostrarDetallesTarjeta
  * @param {string} metodoPago - El método de pago seleccionado.
  * @param {HTMLElement} detallesTarjeta - El elemento HTML que contiene los detalles de la tarjeta.
- * @return {void} No retorna ningún valor.
  */
 function mostrarDetallesTarjeta() {
     var metodoPago = document.getElementById("metodoPago").value;
