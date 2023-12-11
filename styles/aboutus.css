@@ -25,7 +25,14 @@ ul {
     margin: 0;
 }
 
+div {
+    margin: 1rem;
+    padding: 0.1rem;
+}
 
-
-
+.lista{
+    list-style: circle;
+    padding: 0;
+    margin: 1rem;
+}
 
