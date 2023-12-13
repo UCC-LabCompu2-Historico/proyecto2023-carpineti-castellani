@@ -435,21 +435,5 @@ function erase() {
     // Guardar una copia de la imagen actual en la pila
     const canvasImage = canvas.toDataURL('image/png');
     canvasStack.push(canvasImage);
-
-    // Actualizar el tamaño del pincel en el selector
-    brushSizeInput.value = isErasing ? 2 : initialPixelSize;
-    // Cambiar el tamaño del pincel
-    changeBrushSize(brushSizeInput.value);
 }
 
-// Evento para cambiar el tamaño del pincel cuando se ajusta el input
-
-/**
- * Evento que cambia el tamaño del pincel al ajustar el valor del campo de entrada.
- * @method handleBrushSizeInputChange
- * @param {Event} event - El evento de entrada, activado cuando el usuario modifica el valor del campo.
- * @return {void} No retorna ningún valor.
- */
-brushSizeInput.addEventListener('input', () => {
-    changeBrushSize(brushSizeInput.value);
-});
