@@ -5,8 +5,8 @@
  * @param {HTMLElement} detallesTarjeta - El elemento HTML que contiene los detalles de la tarjeta.
  */
 function mostrarDetallesTarjeta() {
-    var metodoPago = document.getElementById("metodoPago").value;
-    var detallesTarjeta = document.getElementById("detallesTarjeta");
+    const metodoPago = document.getElementById("metodoPago").value;
+    const detallesTarjeta = document.getElementById("detallesTarjeta");
 
     if (metodoPago === "efectivo") {
         detallesTarjeta.style.display = "none";
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Evitar el envío del formulario por defecto
 
         // Mostrar el mensaje de agradecimiento después de enviar el formulario
-        var mensajeGracias = document.getElementById("mensajeGracias");
+        const mensajeGracias = document.getElementById("mensajeGracias");
 
         // Redireccionar al catálogo de zapatillas después de 5 segundos
         setTimeout(function () {
@@ -114,7 +114,7 @@ function validarFormulario() {
         return false;
     }
 
-    var numerosRegex = /^[0-9]+$/;
+    const numerosRegex = /^[0-9]+$/;
 
     if (nombreCliente.value === "") {
         nombreCliente.value = "";
